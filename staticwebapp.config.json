@@ -1,0 +1,72 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "route": "/index.html",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "route": "/taskpane.html",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "route": "/auth.html",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "route": "/dialog.html",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "route": "/*.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "route": "/*.css",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "text/css"
+      }
+    },
+    {
+      "route": "/assets/*",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "route": "/manifest.xml",
+      "headers": {
+        "Content-Type": "application/xml"
+      }
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/*.js", "/*.css", "/*.html", "/*.xml"]
+  },
+  "globalHeaders": {
+    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type"
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".xml": "application/xml"
+  }
+}
